@@ -1,0 +1,38 @@
+<div id="inicial">
+    <h1 align="center">Simulado</h1>
+     <br />
+        <p>Bem vindo aluno ao simulado da Instiuição de Ensino Acadêmico, 
+            a maior instiuição de simulados da América Lática</p>
+    <h2>Por favor, insira seu nome</h2>
+     <br />
+    <form align="center" action="/add" method="POST">
+        <div id="cadastro">
+            <input class="form-control" type="text"  name="aluno" maxlength="40" placeholder="Nome do Aluno" style="border: 0px;" id="nome_aluno">
+            <br /><br />
+            <label class="btn btn-primary" id="comecar" >Começar</label>
+        </div>
+</div>
+ 
+    <div id="simulado" class="radio" style="display: none;">
+        <h1>Questão</h1>
+            <hr></hr>
+        <h3>O que diz o artigo 5º da Constuição Federal de 1988?</h3>
+            <label><br />
+                  <input type="radio" name="escolha" value="A" id="resposta">A - Todos são iguais perante a lei, sem distinção de qualquer natureza,
+                garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida,
+                à liberdade, à igualdade, à segurança e à propriedade.
+            </label><br />
+            <label>
+                  <input type="radio" name="escolha" value="B" id="resposta">B - Ninguém será considerado culpado até processo transitado em julgado de sentença penal condenatória.
+            </label><br />
+            <label>
+                  <input type="radio" name="escolha" value="C" id="resposta">C - Esta vedada a desfederalização do Estado, violação da presunção de inocência, violação do direito a vida e a violação do direito a liberdade.
+            </label><br />
+            <label>
+                  <input type="radio" name="escolha" value="D" id="resposta">D - Todos os incisos do Artigo 67º são considerado cláusulas pétreas.
+            </label><br /><br />
+                  <center><button class="btn btn-primary" id="finalizar">Finalizar</button></center>
+    </div>
+    </form>
+
+    
