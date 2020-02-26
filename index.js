@@ -24,7 +24,7 @@ app.post('/add',function(req, res){
   }).then(function(){
     res.redirect('/feedback')
   }).catch(function(erro){
-    alert('Não foi possível criar aluno' + erro)
+    res.send('Selecione uma questão' + erro);
   })
 })
 app.get('/feedback', function(req, res){
