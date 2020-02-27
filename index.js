@@ -4,6 +4,7 @@ const handlebars = require('express-handlebars')
 const bodyParser = require('body-parser')
 const Resp = require('./models/Resp')
 let cont = 0;
+let certa = 0;
 
 //Configuração Handblebars
 //Templet Engine
@@ -39,14 +40,15 @@ app.post('/add',function(req, res){
 })
 //Rota para os que acertaram a questão
 app.get('/feedback', function(req, res){
-  Resp.findAndCountAll({ where: { id: [cont] } }).then(function(resposta){
-    res.render('feedback', {resposta: resposta})
+  ++certa
+  Resp.findAll({ where: { id: [cont] } }).then(function(resposta){
+    res.render('feedback', {resposta: resposta, quantidade: cont, correta: certa})
   })
 })
 //Rota para os que erraram a questão
 app.get('/feedback2', function(req, res){
   Resp.findAll({ where: { id: [cont] } }).then(function(resposta){
-    res.render('feedback2', {resposta: resposta})
+    res.render('feedback2', {resposta: resposta, quantidade: cont, correta: certa})
   })
 })
 //Porta Servidor
