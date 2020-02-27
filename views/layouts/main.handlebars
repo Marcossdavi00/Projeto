@@ -12,7 +12,6 @@
   crossorigin="anonymous"></script>
   <script type="text/javascript">
      $(document).ready(function(){
-
         $('#comecar').click(function(){
 
           //Validação nome do aluno
@@ -20,34 +19,12 @@
            alert('Inserir nome do aluno');
            return false;
             };
-          
+      
           //Controlar Visualização
           $('#inicial').hide();
           $('#simulado').show();
          })
-
-        $('#finalizar').click(function(){     
-          //Validação Resposta
-          if($('#resposta').val() == ''){
-           alert('Escolha uma resposta');
-           return false;
-            };
-          if($('#resposta').val() == 'A'){
-        $('#acerto').hide();
-        $('#errou').show();
-      };
-
-         })
-         $('#resultado').click(function(){
-           //Ver Resultado
-           if($('#resposta').val() == 'A'){
-        $('#acerto').hide();
-        $('#errou').show();
-      };
-         })
-      
-      
-})
+      })
     </script>
 </head>
 <body style="background-color: blueviolet;">
