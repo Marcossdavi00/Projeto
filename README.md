@@ -33,7 +33,7 @@ node Resp.js
 
 E será criado a tabela em seu banco de dados
 
-Comentar o código //Resp.sync({force: true});
+Comentar o código //Resp.sync({force: true}), e tirar o comentário do código module.exports = Resp;
 
 Em seguida
 
